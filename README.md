@@ -35,7 +35,7 @@ The image resolution is reduced to (900, 1600), and angle spacing is adjusted de
 # focal stack generation mode test cmd
 python Incoherent_focal_stack.py --config_filepath=./configs/gen_lf.txt
 ```
-This will scan the a pair of images from `./data/rgbd_dataset` folder: `{image_name}_depthmap.png`, `{image_name}_rgb.png`.
+This will scan a pair of images from `./data/rgbd_dataset` folder: `{image_name}_depthmap.png`, `{image_name}_rgb.png`.
 Then, it will create focal stack from a single RGB-D in `./data/fs_dataset/{image_name}/ch_{channel}`.
 
 ### Focal stack from dense light field (Target for 3D w/ LF)
@@ -44,7 +44,7 @@ Then, it will create focal stack from a single RGB-D in `./data/fs_dataset/{imag
 python Incoherent_LF_focal_stack.py --config_filepath=./configs/gen_fs_lf.txt
 ```
 Note that the configuration file has to be changed with proper {image_name}, {channel}.
-This will create a focal stack from 25x25 dense light field in `./lf_fs_dataset/{image_name}/ch_{channel}`.
+This will create a focal stack from 25x25 dense light field in `./data/lf_fs_dataset/{image_name}/ch_{channel}`.
 
 ## CGH optimization
 2.5D
