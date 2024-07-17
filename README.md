@@ -10,6 +10,8 @@ and [Yoonchan Jeong](http://oeqelab.snu.ac.kr/) (\* denotes equal contribution)
 
 Source code for the SIGGRAPH 2024 paper titled "Holographic Parallax Improves 3D Perceptual Realism"
 
+This is an updated version of [Time-multiplexed-neural-holography](https://github.com/computational-imaging/time-multiplexed-neural-holography), now including additional features relevant to binary amplitude SLMs and incoherent focal stack generation from a RGB-depthmap and orthographic views.
+
 ## Get Started
 Create anaconda environment. 
 Our code has been implemented and tested on Windows.
@@ -21,8 +23,8 @@ conda activate holographic-parallax
 
 ## Target RGB-D, and light field
 We use the inputs of RGB-depthmap, or light field (orthographic views).
-We provide a [sample RGB-depthmap and light field](https://drive.google.com/drive/folders/1SD5bGaiIzJZ3cXgStAbrZD2YVArM1x3j?usp=sharing) with objects of [Stanford Bunny and Dragon](http://graphics.stanford.edu/data/3Dscanrep/) rendered with Unity. 
-Place the `lf_dataset` in `data` directory.
+We provide a sample RGB-D map and [light field](https://drive.google.com/drive/folders/1SD5bGaiIzJZ3cXgStAbrZD2YVArM1x3j?usp=sharing) of [Stanford Bunny and Dragon](http://graphics.stanford.edu/data/3Dscanrep/) rendered with Unity. 
+Place the `lf_dataset` into the `data` folder.
 
 The sample RGB-D and 25x25x3 light field map are rendered based on parameters from 'flcos' SLM and 'wiki' light_src explained in `params.py`. 
 The image resolution is reduced to (900, 1600), and angle spacing is adjusted depending on the color channel.
