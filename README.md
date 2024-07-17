@@ -16,14 +16,15 @@ Our code has been implemented and tested on Windows.
 
 ```
 conda env create -f environment.yml
-conda activate depolarized-holography
+conda activate holographic-parallax
 ```
 
-## Target RGB-D, and Light field
+## Target RGB-D, and light field
 We use the inputs of RGB-depthmap, or light field (orthographic views).
-We provide a [sample RGB-depthmap and light field](https://drive.google.com/drive/folders/1SD5bGaiIzJZ3cXgStAbrZD2YVArM1x3j?usp=sharing) with object of [Stanford Bunny and Dragon](http://graphics.stanford.edu/data/3Dscanrep/) rendered with Unity. 
-** The sample RGB-D and 25x25x3 light field map are rendered based on parameters 
-of 'flcos' SLM, 'wiki' light_src explained in params.py. The image resolution is reduced to (900, 1600), and angle spacing is adjusted depending on the color channel.
+We provide a [sample RGB-depthmap and light field](https://drive.google.com/drive/folders/1SD5bGaiIzJZ3cXgStAbrZD2YVArM1x3j?usp=sharing) with objects of [Stanford Bunny and Dragon](http://graphics.stanford.edu/data/3Dscanrep/) rendered with Unity. 
+
+The sample RGB-D and 25x25x3 light field map are rendered based on parameters from 'flcos' SLM and 'wiki' light_src explained in `params.py`. 
+The image resolution is reduced to (900, 1600), and angle spacing is adjusted depending on the color channel.
 
 ## Focal stack generation
 ### Focal stack from RGB-D (Target for 3D w/ RGB-D)
@@ -31,8 +32,8 @@ of 'flcos' SLM, 'wiki' light_src explained in params.py. The image resolution is
 # focal stack generation mode test cmd
 python Incoherent_LF_focal_stack.py --config_filepath=./configs/gen_fs_lf.txt
 ```
-This will scan the a pair of images from ./data/rgbd_dataset folder: {image_name}_depthmap.png, {image_name}_rgb.png.
-Then, it will create focal stack from a single RGB-D in ./data/fs_dataset/{image_name}/ch_{$c} folders.
+This will scan the a pair of images from `./data/rgbd_dataset` folder: `{image_name}_depthmap.png`, `{image_name}_rgb.png`.
+Then, it will create focal stack from a single RGB-D in `./data/fs_dataset/{image_name}/ch_{channel}` folders.
 
 ### Focal stack from Dense light field (Target for 3D w/ LF)
 ```
@@ -40,7 +41,7 @@ Then, it will create focal stack from a single RGB-D in ./data/fs_dataset/{image
 python Incoherent_LF_focal_stack.py --config_filepath=./configs/gen_fs_lf.txt
 ```
 Note that the configuration file has to be changed with proper {image_name}, {channel}.
-This will create focal stack from 25x25 dense light field in ./lf_dataset/{image_name}/ch_{$c}.
+This will create a focal stack from 25x25 dense light field in `./lf_dataset/{image_name}/ch_{channel}`.
 
 ## CGH optimization
 2.5D supervision
@@ -64,7 +65,9 @@ bash ./configs/4d_rgb_bash.sh
 ```
 
 ## Acknowledgements
-We acknowledge that the implemenation of our code was mostly forked from [Time-multiplexed-neural-holography](https://github.com/computational-imaging/time-multiplexed-neural-holography). Several features are updated to suit our holographic display setup with binary amplitude modulation. Additionnally, our method for generating the incoherent focal stack from RGB and depthmap images is based on the approach described in the work of [Lee et al.](https://doi.org/10.1038/s41598-022-06405-2).
+We acknowledge that the implementation of our code was mostly forked from [Time-multiplexed-neural-holography](https://github.com/computational-imaging/time-multiplexed-neural-holography). 
+Several features are updated to suit our holographic display setup with binary amplitude SLM. 
+Additionally, our method for generating the incoherent focal stack from RGB-depthmap images is based on the approach described in the work of [Lee et al.](https://doi.org/10.1038/s41598-022-06405-2).
 
 ## Citation
 ```
