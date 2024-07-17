@@ -1,0 +1,10 @@
+data_path = ./data/lf_dataset/DragonBunny/ch_2
+out_path = ./data/lf_fs_dataset/DragonBunny/ch_2
+
+channel = 2
+target_type  = 4d
+eyepiece = 0.04
+num_planes = 9
+physical_iris = True
+ang_res = 25,25
+is_perspective = False

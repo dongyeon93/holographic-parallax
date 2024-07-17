@@ -1,0 +1,7 @@
+data_path = ./data/rgbd_dataset
+out_path = ./data/fs_dataset
+
+target_type  = 3d
+eyepiece = 0.04
+num_planes = 9
+physical_iris = True
