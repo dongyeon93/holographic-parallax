@@ -22,6 +22,8 @@ conda activate holographic-parallax
 ## Target RGB-D, and light field
 We use the inputs of RGB-depthmap, or light field (orthographic views).
 We provide a [sample RGB-depthmap and light field](https://drive.google.com/drive/folders/1SD5bGaiIzJZ3cXgStAbrZD2YVArM1x3j?usp=sharing) with objects of [Stanford Bunny and Dragon](http://graphics.stanford.edu/data/3Dscanrep/) rendered with Unity. 
+Place the `rgbd_dataset` and `lf_dataset` in `data` folder.
+
 
 The sample RGB-D and 25x25x3 light field map are rendered based on parameters from 'flcos' SLM and 'wiki' light_src explained in `params.py`. 
 The image resolution is reduced to (900, 1600), and angle spacing is adjusted depending on the color channel.
