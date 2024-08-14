@@ -1,5 +1,5 @@
 # Holographic Parallax Improves 3D Perceptual Realism
-### [Paper]() | [arXiv](https://arxiv.org/abs/2404.11810) | [Project Page](https://www.computationalimaging.org/publications/holographic-parallax/) | [Video](https://youtu.be/p43MSDOEWWw?si=2VC_8LeOhYAUm2Et)
+### [Paper](https://dl.acm.org/doi/10.1145/3658168) | [arXiv](https://arxiv.org/abs/2404.11810) | [Project Page](https://www.computationalimaging.org/publications/holographic-parallax/) | [Video](https://youtu.be/p43MSDOEWWw?si=2VC_8LeOhYAUm2Et)
 
 [Dongyeon Kim*](https://dongyeon93.github.io/),
 [Seung-Woo Nam*](https://nseungwoo.github.io/),
