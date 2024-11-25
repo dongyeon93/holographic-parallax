@@ -33,7 +33,7 @@ The image resolution is reduced to (900, 1600), and angle spacing is adjusted de
 ### Focal stack from RGB-D (Target for 3D w/ RGB-D)
 ```
 # focal stack generation mode test cmd
-python Incoherent_focal_stack.py --config_filepath=./configs/gen_lf.txt
+python Incoherent_focal_stack.py --config_filepath=./configs/gen_fs.txt
 ```
 This will scan a pair of images from `./data/rgbd_dataset` folder: `{image_name}_depthmap.png`, `{image_name}_rgb.png`.
 Then, it will create focal stack from a single RGB-D in `./data/fs_dataset/{image_name}/ch_{channel}`.
